@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main(){
+    int a, b;
+    int c, d;
+    int dif;
+    printf ("Insira dois valores: ");
+    scanf ("%d%d", &a, &b);
+    printf ("Insira mais dois valores: ");
+    scanf ("%d%d", &c, &d);
+    dif = ((a + b) - (c + d));
+    printf ("A diferença dos produtos é %d", dif); 
+}
