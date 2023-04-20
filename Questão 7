@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+setlocale(LC_ALL,"");
+    int n, i, n1 = 0, n2 = 1, proximoNum;
+    printf("Digite um número: ");
+    scanf("%i", &n);
+    if(n < 0) {
+        printf("O número deve ser maior ou igual a zero.");
+        return 0;
+    }
+    for(i = 0; i < n; i++) {
+        if(i == 0) {
+            proxNum = n1;
+        }
+        else if(i == 1) {
+            proxNum = n2;
+        }
+        else {
+            proxNum = n1 + n2;
+            n1 = n2;
+            n2 = proxNum;
+        }
+    }
+    printf("O enésimo número da sequência de Fibonacci é %d", proxNum);
+    return 0;
+}
