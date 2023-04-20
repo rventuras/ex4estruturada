@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <locale.h>
+int main() {
+	setlocale(LC_ALL,"");
+    int n, maior, menor;
+    printf("Digite um número inteiro: ");
+    scanf("%d", &n);
+    maior = n;
+    menor = n;
+    while(n >= 0) {
+        printf("Digite outro número positivo\n");
+        printf("Para cancelar a operação, digite um número negativo:");
+        scanf("%d", &n);
+        if(n >= 0) {
+            if(n > maior) {
+                maior = n;
+            }
+            if(n < menor) {
+                menor = n;
+            }
+        }
+    }
+    printf("O maior número foi: %d\n", maior);
+    printf("O menor número foi: %d", menor);
+    return 0;
+}
