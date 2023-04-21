@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <locale.h>
+int main(){
+	setlocale(LC_ALL,"");
+	int opc, cont;
+	float valor = 0, qntd;
+	    printf("____________________________\n");
+        printf("|1 | Abacaxi|5,00 a unidade|\n");
+        printf("|2 | Maçã   |1,00 a unidade|\n");
+        printf("|3 | Pêra   |4,00 a unidade|\n");
+        printf("|__________________________|\n");
+        do{
+		
+        printf("Digite o número da fruta: ");
+        scanf("%d", &opc);
+        switch (opc){
+        	case 1: 
+        	printf ("Você escolheu abacaxi!\n");
+        	printf ("Quantas deseja? ");
+        	scanf ("%i" , &qntd);
+        	valor = 5 * qntd;
+			printf ("Se quiser continuar, digite 1, se não, 0\n");
+        	scanf ("%i", &cont);
+        	break;
+        	case 2:
+        	printf ("Você escolheu maçã!\n");
+        	printf ("Quantas deseja? ");
+        	scanf ("%i" , &qntd);
+        	valor = 1 * qntd;
+        	printf ("Se quiser continuar, digite 1, se não, 0\n");
+        	scanf ("%i", &cont);
+        	break;
+        	case 3:
+        	printf ("Você escolheu a pêra!\n");
+        	printf ("Quantas deseja? ");
+        	scanf ("%i" , &qntd);
+        	valor = 4 * qntd;
+        	printf ("Se quiser continuar, digite 1, se não, 0\n");
+        	scanf ("%i", &cont);
+        	break;
+        	default:
+        		printf ("Número invalido!\n");
+        		printf ("Se quiser continuar, digite 1, se não, 0\n");
+        	    scanf ("%i", &cont);
+        
+		}
+				
+		}
+		while(cont == 1);
+		printf ("Valor total = %.2f", valor);
+		
+		}
